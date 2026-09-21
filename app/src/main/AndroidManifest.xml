@@ -23,6 +23,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 实验1：线性布局 -->
+        <activity
+            android:name=".LinearLayoutActivity"
+            android:exported="false"
+            android:label="线性布局"
+            android:theme="@style/Theme.Android_test1.AppCompat" />
+
+        <!-- 实验2：表格布局 -->
+        <activity
+            android:name=".TableLayoutActivity"
+            android:exported="false"
+            android:label="表格布局"
+            android:theme="@style/Theme.Android_test1.AppCompat" />
+
+        <!-- 实验3：约束布局1——计算器 -->
+        <activity
+            android:name=".CalculatorActivity"
+            android:exported="false"
+            android:label="ConstraintLayoutTest"
+            android:theme="@style/Theme.Android_test1.AppCompat" />
+
+        <!-- 实验4：约束布局2——太空旅行 -->
+        <activity
+            android:name=".SpaceTravelActivity"
+            android:exported="false"
+            android:label="Flights"
+            android:theme="@style/Theme.Android_test1.AppCompat" />
+
+        <!-- 实验5：Android Compose 任务列表 -->
+        <activity
+            android:name=".ComposeTaskActivity"
+            android:exported="false"
+            android:label="课程学习任务"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

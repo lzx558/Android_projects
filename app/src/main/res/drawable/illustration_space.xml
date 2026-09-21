@@ -1,0 +1,94 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp"
+    android:height="240dp"
+    android:viewportWidth="240"
+    android:viewportHeight="240">
+
+    <!-- 装饰星星 -->
+    <path
+        android:fillColor="#FFFFC107"
+        android:pathData="M42,40 m-2.2,0 a2.2,2.2 0 1,0 4.4,0 a2.2,2.2 0 1,0 -4.4,0" />
+    <path
+        android:fillColor="#FFFFC107"
+        android:pathData="M205,185 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#FFFFC107"
+        android:pathData="M46,198 m-1.8,0 a1.8,1.8 0 1,0 3.6,0 a1.8,1.8 0 1,0 -3.6,0" />
+    <path
+        android:fillColor="#FFFFC107"
+        android:pathData="M196,46 l2.2,5 5,2.2 -5,2.2 -2.2,5 -2.2,-5 -5,-2.2 5,-2.2 z" />
+
+    <!-- 整体倾斜 -20 度的轨道系统 -->
+    <group
+        android:pivotX="120"
+        android:pivotY="120"
+        android:rotation="-20">
+
+        <!-- 轨道椭圆 -->
+        <path
+            android:strokeColor="#FFB0BEC5"
+            android:strokeWidth="2"
+            android:pathData="M25,120 a95,60 0 1,0 190,0 a95,60 0 1,0 -190,0" />
+
+        <!-- 地球 -->
+        <path
+            android:strokeColor="#FFB3E5FC"
+            android:strokeWidth="3"
+            android:pathData="M25,120 m-27,0 a27,27 0 1,0 54,0 a27,27 0 1,0 -54,0" />
+        <path
+            android:fillColor="#FF4A90D9"
+            android:pathData="M25,120 m-26,0 a26,26 0 1,0 52,0 a26,26 0 1,0 -52,0" />
+        <path
+            android:fillColor="#FF2EA76D"
+            android:pathData="M14,108 q10,-6 16,2 q-2,10 -12,8 q-8,-2 -4,-10 z" />
+        <path
+            android:fillColor="#FF2EA76D"
+            android:pathData="M30,126 q8,2 8,9 q-8,6 -14,-1 q0,-6 6,-8 z" />
+
+        <!-- 火星 -->
+        <path
+            android:fillColor="#FFE27B58"
+            android:pathData="M215,120 m-18,0 a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0" />
+        <path
+            android:fillColor="#FFB85A3E"
+            android:pathData="M207,113 q7,-3 11,3 q-6,4 -11,-3 z" />
+        <path
+            android:fillColor="#FFB85A3E"
+            android:pathData="M219,124 q5,4 1,8 q-6,-1 -5,-7 z" />
+
+        <!-- 火箭 -->
+        <group
+            android:translateX="120"
+            android:translateY="58">
+            <path
+                android:fillColor="#FFFF7043"
+                android:pathData="M-3,9 L0,19 L3,9 Z" />
+            <path
+                android:fillColor="#FFFFCA28"
+                android:pathData="M-1.5,9 L0,15 L1.5,9 Z" />
+            <path
+                android:fillColor="#FFECEFF1"
+                android:strokeColor="#FF90A4AE"
+                android:strokeWidth="1.2"
+                android:pathData="M-7,5 L-12,12 L-7,11 Z" />
+            <path
+                android:fillColor="#FFECEFF1"
+                android:strokeColor="#FF90A4AE"
+                android:strokeWidth="1.2"
+                android:pathData="M7,5 L12,12 L7,11 Z" />
+            <path
+                android:fillColor="#FFFFFFFF"
+                android:strokeColor="#FF90A4AE"
+                android:strokeWidth="1.2"
+                android:pathData="M0,-17 C6,-10 7,1 7,8 L-7,8 C-7,1 -6,-10 0,-17 Z" />
+            <path
+                android:fillColor="#FFE53935"
+                android:pathData="M0,-17 L4,-9 L-4,-9 Z" />
+            <path
+                android:fillColor="#FF455A64"
+                android:pathData="M0,-6 m-2.6,0 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0" />
+        </group>
+
+    </group>
+
+</vector>

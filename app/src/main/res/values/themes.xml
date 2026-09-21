@@ -2,4 +2,12 @@
 <resources>
 
     <style name="Theme.Android_test1" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- 供实验1-4基于XML布局的Activity使用 -->
+    <style name="Theme.Android_test1.AppCompat" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#3DDC84</item>
+        <item name="colorPrimaryDark">#2EA76D</item>
+        <item name="colorAccent">#3DDC84</item>
+    </style>
+
 </resources>

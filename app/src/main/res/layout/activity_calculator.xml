@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 实验3：约束布局1——计算器（按键使用 horizontal/vertical chain 排布） -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- 顶部应用栏 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/calc_primary"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:text="ConstraintLayoutTest"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 输入框 -->
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFEEEEEE"
+        android:hint="Input"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned|numberDecimal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 绿色装饰条 -->
+    <View
+        android:id="@+id/view_accent"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/calc_primary"
+        app:layout_constraintTop_toBottomOf="@id/et_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 显示屏 -->
+    <TextView
+        android:id="@+id/tv_display"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_display"
+        android:gravity="end|center_vertical"
+        android:paddingHorizontal="16dp"
+        android:text="0.0"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@id/view_accent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 第一行 7 8 9 + ：水平 chain 头为 btn_7 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_7"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_num"
+        android:text="7"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/tv_display"
+        app:layout_constraintBottom_toTopOf="@id/btn_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_8"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_num"
+        android:text="8"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btn_7"
+        app:layout_constraintBottom_toBottomOf="@id/btn_7"
+        app:layout_constraintStart_toEndOf="@id/btn_7"
+        app:layout_constraintEnd_toStartOf="@id/btn_9" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_9"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_num"
+        android:text="9"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btn_7"
+        app:layout_constraintBottom_toBottomOf="@id/btn_7"
+        app:layout_constraintStart_toEndOf="@id/btn_8"
+        app:layout_constraintEnd_toStartOf="@id/btn_add" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_op"
+        android:text="+"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btn_7"
+        app:layout_constraintBottom_toBottomOf="@id/btn_7"
+        app:layout_constraintStart_toEndOf="@id/btn_9"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 第二行 4 5 6 × -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_4"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_num"
+        android:text="4"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/btn_7"
+        app:layout_constraintBottom_toTopOf="@id/btn_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_5"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_num"
+        android:text="5"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btn_4"
+        app:layout_constraintBottom_toBottomOf="@id/btn_4"
+        app:layout_constraintStart_toEndOf="@id/btn_4"
+        app:layout_constraintEnd_toStartOf="@id/btn_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_6"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_num"
+        android:text="6"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btn_4"
+        app:layout_constraintBottom_toBottomOf="@id/btn_4"
+        app:layout_constraintStart_toEndOf="@id/btn_5"
+        app:layout_constraintEnd_toStartOf="@id/btn_mul" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_mul"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_op"
+        android:text="×"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btn_4"
+        app:layout_constraintBottom_toBottomOf="@id/btn_4"
+        app:layout_constraintStart_toEndOf="@id/btn_6"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 第三行 1 2 3 − -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_num"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/btn_4"
+        app:layout_constraintBottom_toTopOf="@id/btn_dot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_num"
+        android:text="2"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btn_1"
+        app:layout_constraintBottom_toBottomOf="@id/btn_1"
+        app:layout_constraintStart_toEndOf="@id/btn_1"
+        app:layout_constraintEnd_toStartOf="@id/btn_3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_3"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_num"
+        android:text="3"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btn_1"
+        app:layout_constraintBottom_toBottomOf="@id/btn_1"
+        app:layout_constraintStart_toEndOf="@id/btn_2"
+        app:layout_constraintEnd_toStartOf="@id/btn_sub" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sub"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_op"
+        android:text="−"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="@id/btn_1"
+        app:layout_constraintBottom_toBottomOf="@id/btn_1"
+        app:layout_constraintStart_toEndOf="@id/btn_3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 第四行 . 0 = ÷ -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_dot"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_num"
+        android:text="."
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/btn_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_0"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_num"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btn_dot"
+        app:layout_constraintBottom_toBottomOf="@id/btn_dot"
+        app:layout_constraintStart_toEndOf="@id/btn_dot"
+        app:layout_constraintEnd_toStartOf="@id/btn_eq" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_eq"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_op"
+        android:text="="
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btn_dot"
+        app:layout_constraintBottom_toBottomOf="@id/btn_dot"
+        app:layout_constraintStart_toEndOf="@id/btn_0"
+        app:layout_constraintEnd_toStartOf="@id/btn_div" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_div"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_key_op"
+        android:text="÷"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/btn_dot"
+        app:layout_constraintBottom_toBottomOf="@id/btn_dot"
+        app:layout_constraintStart_toEndOf="@id/btn_eq"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
