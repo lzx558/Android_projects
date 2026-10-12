@@ -57,6 +57,31 @@ private val experiments = listOf(
         "5. Android Compose",
         "课程学习任务列表：添加 / 勾选 / 删除与状态同步",
         ComposeTaskActivity::class.java
+    ),
+    Experiment(
+        "6. ListView + SimpleAdapter",
+        "动物列表：点击 Toast + 发送通知",
+        ListViewActivity::class.java
+    ),
+    Experiment(
+        "7. 自定义 AlertDialog",
+        "自定义登录对话框：橙色标题栏 + 用户名/密码",
+        AlertDialogActivity::class.java
+    ),
+    Experiment(
+        "8. XML 定义菜单",
+        "字体大小（小/中/大）、普通项、字体颜色（红/黑）",
+        MenuTestActivity::class.java
+    ),
+    Experiment(
+        "9. ActionMode 上下文菜单",
+        "ListView 多选删除：长按进入上下文操作模式",
+        ActionModeActivity::class.java
+    ),
+    Experiment(
+        "10. RecyclerView",
+        "动物列表：Adapter + ViewHolder，点击显示名称，增加记录即时更新",
+        RecyclerViewActivity::class.java
     )
 )
 
@@ -79,7 +104,7 @@ private fun ExperimentMenu(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     Column(modifier = modifier.fillMaxSize()) {
         Text(
-            text = "实验2  Android 界面布局",
+            text = "移动软件开发实验",
             fontSize = 22.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(16.dp)

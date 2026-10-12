@@ -10,4 +10,11 @@
         <item name="colorAccent">#3DDC84</item>
     </style>
 
+    <!-- 带ActionBar的主题，供菜单实验使用 -->
+    <style name="Theme.Android_test1.AppCompat.ActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">#3DDC84</item>
+        <item name="colorPrimaryDark">#2EA76D</item>
+        <item name="colorAccent">#3DDC84</item>
+    </style>
+
 </resources>

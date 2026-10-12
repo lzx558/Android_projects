@@ -58,6 +58,41 @@
             android:exported="false"
             android:label="课程学习任务"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- 实验3-1：ListView + SimpleAdapter -->
+        <activity
+            android:name=".ListViewActivity"
+            android:exported="false"
+            android:label="ListView"
+            android:theme="@style/Theme.Android_test1.AppCompat" />
+
+        <!-- 实验3-2：自定义 AlertDialog -->
+        <activity
+            android:name=".AlertDialogActivity"
+            android:exported="false"
+            android:label="AlertDialog"
+            android:theme="@style/Theme.Android_test1.AppCompat" />
+
+        <!-- 实验3-3：XML 菜单 -->
+        <activity
+            android:name=".MenuTestActivity"
+            android:exported="false"
+            android:label="MenuTest"
+            android:theme="@style/Theme.Android_test1.AppCompat.ActionBar" />
+
+        <!-- 实验3-4：ActionMode 上下文菜单 -->
+        <activity
+            android:name=".ActionModeActivity"
+            android:exported="false"
+            android:label="ActionMode"
+            android:theme="@style/Theme.Android_test1.AppCompat" />
+
+        <!-- 实验3-5：RecyclerView -->
+        <activity
+            android:name=".RecyclerViewActivity"
+            android:exported="false"
+            android:label="RecyclerView"
+            android:theme="@style/Theme.Android_test1.AppCompat" />
     </application>
 
 </manifest>
