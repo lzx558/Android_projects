@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     期中考试：笔记编辑页 —— 选项菜单
+     ============================================================ -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_save"
+        android:icon="@drawable/midterm_ic_save"
+        android:title="@string/midterm_menu_save"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_pin"
+        android:icon="@drawable/midterm_ic_pin"
+        android:title="@string/midterm_menu_pin"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_export"
+        android:icon="@drawable/midterm_ic_export"
+        android:title="@string/midterm_menu_export"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_rename"
+        android:icon="@drawable/midterm_ic_edit"
+        android:title="@string/midterm_menu_rename"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_revert"
+        android:icon="@drawable/midterm_ic_revert"
+        android:title="@string/midterm_menu_revert"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_delete"
+        android:icon="@drawable/midterm_ic_delete"
+        android:title="@string/midterm_menu_delete"
+        app:showAsAction="never" />
+
+</menu>

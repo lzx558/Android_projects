@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     期中考试：NotePad 记事本应用 —— 颜色（深色模式覆盖）
+     ============================================================ -->
+<resources>
+    <color name="midterm_category_bg">#FF1E3A5F</color>
+    <color name="midterm_category_text">#FF90CAF9</color>
+
+    <color name="midterm_search_bg">#FF2A2A2A</color>
+    <color name="midterm_search_stroke">#FF3D3D3D</color>
+
+    <color name="midterm_text_secondary">#FF9E9E9E</color>
+
+    <color name="midterm_icon">#FFE0E0E0</color>
+</resources>

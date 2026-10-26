@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     期中考试：NotePad 记事本应用 —— 字符串
+     ============================================================ -->
+<resources>
+
+    <string name="midterm_app_name">记事本</string>
+    <string name="midterm_title_notes_list">我的笔记</string>
+    <string name="midterm_title_edit">编辑笔记</string>
+    <string name="midterm_title_create">新建笔记</string>
+    <string name="midterm_title_settings">设置</string>
+    <string name="midterm_title_edit_title">笔记标题</string>
+
+    <!-- 菜单 -->
+    <string name="midterm_menu_add">新建笔记</string>
+    <string name="midterm_menu_save">保存</string>
+    <string name="midterm_menu_delete">删除</string>
+    <string name="midterm_menu_revert">还原</string>
+    <string name="midterm_menu_settings">设置</string>
+    <string name="midterm_menu_export">导出</string>
+    <string name="midterm_menu_pin">置顶</string>
+    <string name="midterm_menu_unpin">取消置顶</string>
+    <string name="midterm_menu_open">打开</string>
+    <string name="midterm_menu_copy">复制</string>
+    <string name="midterm_menu_rename">修改标题</string>
+    <string name="midterm_menu_sort">排序</string>
+
+    <!-- 输入提示 -->
+    <string name="midterm_hint_search">搜索标题或内容</string>
+    <string name="midterm_hint_title">标题</string>
+    <string name="midterm_hint_note">在这里记录你的想法…</string>
+
+    <!-- 空状态 -->
+    <string name="midterm_empty_list">还没有笔记，点右上角 + 新建一条</string>
+    <string name="midterm_empty_search">没有找到匹配的笔记</string>
+
+    <!-- 标签 -->
+    <string name="midterm_label_category">分类：</string>
+    <string name="midterm_label_time">创建于 %1$s</string>
+    <string name="midterm_label_modified">修改于 %1$s</string>
+
+    <!-- 提示 -->
+    <string name="midterm_toast_saved">已保存</string>
+    <string name="midterm_toast_nothing">没有可保存的内容</string>
+    <string name="midterm_toast_pinned">已置顶</string>
+    <string name="midterm_toast_unpinned">已取消置顶</string>
+    <string name="midterm_toast_deleted">已删除</string>
+    <string name="midterm_toast_exported">已导出到 %1$s</string>
+    <string name="midterm_toast_export_failed">导出失败</string>
+    <string name="midterm_toast_copy_done">已复制到剪贴板</string>
+    <string name="midterm_toast_no_category">未分类</string>
+
+    <!-- 对话框 -->
+    <string name="midterm_dialog_discard_title">放弃修改？</string>
+    <string name="midterm_dialog_discard_msg">这条笔记还没有保存，返回后将丢失修改。</string>
+    <string name="midterm_dialog_discard_ok">放弃</string>
+    <string name="midterm_dialog_discard_cancel">继续编辑</string>
+    <string name="midterm_dialog_delete_title">删除笔记</string>
+    <string name="midterm_dialog_delete_msg">删除后无法恢复，确定删除「%1$s」吗？</string>
+    <string name="midterm_dialog_ok">确定</string>
+    <string name="midterm_dialog_cancel">取消</string>
+    <string name="midterm_button_ok">确定</string>
+
+    <!-- 设置 -->
+    <string name="midterm_settings_sort">排序方式</string>
+    <string name="midterm_settings_font">正文字号</string>
+    <string name="midterm_settings_font_value">%1$d sp</string>
+    <string name="midterm_settings_dark">深色模式</string>
+    <string name="midterm_settings_dark_summary">夜间使用更护眼</string>
+    <string name="midterm_settings_default_category">新建笔记默认分类</string>
+    <string name="midterm_settings_about">关于</string>
+    <string name="midterm_settings_about_text">基于 Android 官方 NotePad 示例扩展：\nContentProvider + SQLite 存储，支持时间戳、搜索、分类、置顶、导出与偏好设置。</string>
+    <string name="midterm_settings_reset">恢复默认设置</string>
+
+    <!-- 导出 -->
+    <string name="midterm_export_chooser">分享笔记</string>
+    <string name="midterm_export_subject">记事本导出：%1$s</string>
+
+</resources>

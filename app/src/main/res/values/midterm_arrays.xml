@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     期中考试：NotePad 记事本应用 —— 数组
+     ============================================================ -->
+<resources>
+
+    <!-- 列表页分类筛选（第 0 项为"全部"） -->
+    <string-array name="midterm_filter_categories">
+        <item>全部分类</item>
+        <item>工作</item>
+        <item>学习</item>
+        <item>生活</item>
+        <item>灵感</item>
+        <item>其他</item>
+    </string-array>
+
+    <!-- 编辑页可选分类 -->
+    <string-array name="midterm_edit_categories">
+        <item>工作</item>
+        <item>学习</item>
+        <item>生活</item>
+        <item>灵感</item>
+        <item>其他</item>
+    </string-array>
+
+    <!-- 排序方式，与 NoteSettings 中的 SORT_* 常量顺序一致 -->
+    <string-array name="midterm_sort_options">
+        <item>修改时间（新 → 旧）</item>
+        <item>创建时间（新 → 旧）</item>
+        <item>标题（A → Z）</item>
+    </string-array>
+
+</resources>

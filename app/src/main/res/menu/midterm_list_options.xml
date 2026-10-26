@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     期中考试：笔记列表 —— 选项菜单
+     ============================================================ -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_add"
+        android:icon="@drawable/midterm_ic_add"
+        android:title="@string/midterm_menu_add"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/midterm_ic_settings"
+        android:title="@string/midterm_menu_settings"
+        app:showAsAction="always" />
+
+</menu>

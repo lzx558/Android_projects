@@ -3,7 +3,7 @@
 
     <style name="Theme.Android_test1" parent="android:Theme.Material.Light.NoActionBar" />
 
-    <!-- 供实验1-4基于XML布局的Activity使用 -->
+    <!-- 无 ActionBar 主题：供实验二、实验三基于 XML 布局的 Activity 使用 -->
     <style name="Theme.Android_test1.AppCompat" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">#3DDC84</item>
         <item name="colorPrimaryDark">#2EA76D</item>

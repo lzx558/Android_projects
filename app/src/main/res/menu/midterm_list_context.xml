@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     期中考试：笔记列表 —— 长按上下文菜单
+     ============================================================ -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/context_open"
+        android:title="@string/midterm_menu_open" />
+
+    <item
+        android:id="@+id/context_pin"
+        android:title="@string/midterm_menu_pin" />
+
+    <item
+        android:id="@+id/context_copy"
+        android:title="@string/midterm_menu_copy" />
+
+    <item
+        android:id="@+id/context_delete"
+        android:title="@string/midterm_menu_delete" />
+
+</menu>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     期中考试：导出笔记时通过 FileProvider 分享的目录
+     ============================================================ -->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-files-path
+        name="midterm_exports"
+        path="exports/" />
+    <files-path
+        name="midterm_exports_internal"
+        path="exports/" />
+</paths>

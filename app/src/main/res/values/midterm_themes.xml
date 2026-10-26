@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     期中考试：NotePad 记事本应用 —— 主题
+     DayNight 父主题，深色模式设置才能生效
+     ============================================================ -->
+<resources>
+
+    <style name="Theme.Android_test1.Midterm" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/midterm_primary</item>
+        <item name="colorPrimaryVariant">@color/midterm_primary_dark</item>
+        <item name="colorSecondary">@color/midterm_accent</item>
+        <item name="android:statusBarColor">@color/midterm_primary_dark</item>
+    </style>
+
+    <!-- 标题编辑用的对话框主题 -->
+    <style name="Theme.Android_test1.Midterm.Dialog" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="colorPrimary">@color/midterm_primary</item>
+        <item name="colorPrimaryVariant">@color/midterm_primary_dark</item>
+        <item name="colorSecondary">@color/midterm_accent</item>
+    </style>
+
+</resources>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 实验二 · 04 约束布局（二）——太空旅行订票界面 -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- 顶部三个 Tab（水平 spread chain，0dp + weight 等分） -->
+    <LinearLayout
+        android:id="@+id/tab_stations"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="12dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tab_flights">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="Space Stations"
+            android:scaleType="fitCenter"
+            android:alpha="0.4"
+            android:src="@drawable/lab2_space_station_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Space Stations"
+            android:textColor="@color/lab2_space_tab_inactive"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_flights"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="12dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tab_stations"
+        app:layout_constraintEnd_toStartOf="@id/tab_rovers">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="Flights"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lab2_rocket_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Flights"
+            android:textColor="@color/lab2_space_primary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_rovers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="12dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tab_flights"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="Rovers"
+            android:scaleType="fitCenter"
+            android:alpha="0.4"
+            android:src="@drawable/lab2_rover_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Rovers"
+            android:textColor="@color/lab2_space_tab_inactive"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- 选中 Tab 的绿色指示条（与 Flights 同宽） -->
+    <View
+        android:id="@+id/view_tab_indicator"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@color/lab2_space_primary"
+        app:layout_constraintStart_toStartOf="@id/tab_flights"
+        app:layout_constraintEnd_toEndOf="@id/tab_flights"
+        app:layout_constraintTop_toBottomOf="@id/tab_flights" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#FFE0E0E0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_stations" />
+
+    <!-- 航线选择：DCA ⇄ MARS（packed chain 居中） -->
+    <TextView
+        android:id="@+id/box_departure"
+        android:layout_width="96dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/lab2_bg_route_box"
+        android:gravity="center"
+        android:text="DCA"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/view_tab_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_swap" />
+
+    <ImageView
+        android:id="@+id/img_swap"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="16dp"
+        android:contentDescription="Swap"
+        android:scaleType="fitCenter"
+        android:src="@drawable/lab2_double_arrows"
+        app:layout_constraintTop_toTopOf="@id/box_departure"
+        app:layout_constraintBottom_toBottomOf="@id/box_departure"
+        app:layout_constraintStart_toEndOf="@id/box_departure"
+        app:layout_constraintEnd_toStartOf="@id/box_arrival" />
+
+    <TextView
+        android:id="@+id/box_arrival"
+        android:layout_width="96dp"
+        android:layout_height="56dp"
+        android:background="@drawable/lab2_bg_route_box"
+        android:gravity="center"
+        android:text="MARS"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/box_departure"
+        app:layout_constraintStart_toEndOf="@id/img_swap"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- One Way 开关 -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_one_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:checked="true"
+        android:text="One Way"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/box_departure"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 人数选择按钮 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_traveller"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/lab2_bg_traveller"
+        android:text="1 Traveller"
+        android:textAllCaps="false"
+        android:textColor="#FF424242"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@id/switch_one_way"
+        app:layout_constraintBottom_toBottomOf="@id/switch_one_way"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 轨道示意图（群文件图片资源） -->
+    <ImageView
+        android:id="@+id/img_orbit"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Earth to Mars orbit"
+        android:scaleType="fitCenter"
+        android:src="@drawable/lab2_galaxy"
+        app:layout_constraintTop_toBottomOf="@id/switch_one_way"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- DEPART 按钮 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_depart"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/lab2_bg_depart"
+        android:letterSpacing="0.15"
+        android:text="DEPART"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/img_orbit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- ==================== 通用颜色 ==================== -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Compose 主题默认调色板（Material3 模板保留） -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
 
-    <!-- 实验1 线性布局 -->
-    <color name="grid_bg">#FF1A1A1A</color>
-    <color name="grid_button">#FF000000</color>
+    <!-- ==================== 实验二：界面布局 ==================== -->
 
-    <!-- 实验2 表格布局 -->
-    <color name="menu_bg">#FF000000</color>
-    <color name="menu_title_bg">#FF303030</color>
-    <color name="menu_divider">#FF404040</color>
+    <!-- 实验二 · 01 线性布局 -->
+    <color name="lab2_grid_bg">#FF1A1A1A</color>
+    <color name="lab2_grid_button">#FF000000</color>
 
-    <!-- 实验3 计算器 -->
-    <color name="calc_primary">#FF3DDC84</color>
-    <color name="calc_display_bg">#FFF1F2EE</color>
-    <color name="calc_key_num">#FFE0E0E0</color>
-    <color name="calc_key_op">#FFC9C9C9</color>
+    <!-- 实验二 · 02 表格布局 -->
+    <color name="lab2_menu_bg">#FF000000</color>
+    <color name="lab2_menu_title_bg">#FF303030</color>
+    <color name="lab2_menu_divider">#FF404040</color>
 
-    <!-- 实验4 太空旅行 -->
-    <color name="space_primary">#FF3DDC84</color>
-    <color name="space_primary_dark">#FF2EA76D</color>
-    <color name="space_tab_inactive">#FF9E9E9E</color>
+    <!-- 实验二 · 03 计算器 -->
+    <color name="lab2_calc_primary">#FF3DDC84</color>
+    <color name="lab2_calc_display_bg">#FFF1F2EE</color>
+    <color name="lab2_calc_key_num">#FFE0E0E0</color>
+    <color name="lab2_calc_key_op">#FFC9C9C9</color>
 
-    <!-- 实验5 Compose -->
-    <color name="task_red">#FFE53935</color>
+    <!-- 实验二 · 04 太空旅行 -->
+    <color name="lab2_space_primary">#FF3DDC84</color>
+    <color name="lab2_space_primary_dark">#FF2EA76D</color>
+    <color name="lab2_space_tab_inactive">#FF9E9E9E</color>
+
+    <!-- 实验二 · 05 Compose 任务列表 -->
+    <color name="lab2_task_red">#FFE53935</color>
+
 </resources>

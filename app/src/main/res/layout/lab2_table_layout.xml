@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 实验二 · 02 表格布局——深色菜单项（两列：菜单名 / 快捷键） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lab2_menu_bg">
+
+    <!-- 标题栏 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lab2_menu_title_bg"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="14dp"
+        android:text="Hello TableLayout"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- stretchColumns="1"：第二列（快捷键）自动拉伸占满剩余宽度 -->
+    <TableLayout
+        android:id="@+id/table_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/lab3_divider_menu"
+        android:showDividers="middle"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text="Open..."
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text="Ctrl-O"
+                android:textColor="#FFCCCCCC"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text="Save..."
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text="Ctrl-S"
+                android:textColor="#FFCCCCCC"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text="Save As..."
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text="Ctrl-Shift-S"
+                android:textColor="#FFCCCCCC"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/lab3_ic_menu_marker"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text="Import..."
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text=""
+                android:textColor="#FFCCCCCC"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/lab3_ic_menu_marker"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text="Export..."
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text="Ctrl-E"
+                android:textColor="#FFCCCCCC"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text="Quit"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:text=""
+                android:textSize="16sp" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

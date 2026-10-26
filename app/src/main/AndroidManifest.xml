@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_test1">
+
+        <!-- 入口：实验总菜单 -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -24,75 +26,135 @@
             </intent-filter>
         </activity>
 
-        <!-- 实验1：线性布局 -->
+        <!-- ==================================================
+             实验二：Android 界面布局（com.example.android_test1.lab2）
+             ================================================== -->
+
+        <!-- 实验二 · 01 线性布局 -->
         <activity
-            android:name=".LinearLayoutActivity"
+            android:name=".lab2.LinearLayoutActivity"
             android:exported="false"
             android:label="线性布局"
             android:theme="@style/Theme.Android_test1.AppCompat" />
 
-        <!-- 实验2：表格布局 -->
+        <!-- 实验二 · 02 表格布局 -->
         <activity
-            android:name=".TableLayoutActivity"
+            android:name=".lab2.TableLayoutActivity"
             android:exported="false"
             android:label="表格布局"
             android:theme="@style/Theme.Android_test1.AppCompat" />
 
-        <!-- 实验3：约束布局1——计算器 -->
+        <!-- 实验二 · 03 约束布局（一）计算器 -->
         <activity
-            android:name=".CalculatorActivity"
+            android:name=".lab2.CalculatorActivity"
             android:exported="false"
             android:label="ConstraintLayoutTest"
             android:theme="@style/Theme.Android_test1.AppCompat" />
 
-        <!-- 实验4：约束布局2——太空旅行 -->
+        <!-- 实验二 · 04 约束布局（二）太空旅行 -->
         <activity
-            android:name=".SpaceTravelActivity"
+            android:name=".lab2.SpaceTravelActivity"
             android:exported="false"
             android:label="Flights"
             android:theme="@style/Theme.Android_test1.AppCompat" />
 
-        <!-- 实验5：Android Compose 任务列表 -->
+        <!-- 实验二 · 05 Android Compose 任务列表 -->
         <activity
-            android:name=".ComposeTaskActivity"
+            android:name=".lab2.ComposeTaskActivity"
             android:exported="false"
             android:label="课程学习任务"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- 实验3-1：ListView + SimpleAdapter -->
+        <!-- ==================================================
+             实验三：事件处理 · 列表 · 对话框 · 菜单（com.example.android_test1.lab3）
+             ================================================== -->
+
+        <!-- 实验三 · 01 ListView + SimpleAdapter -->
         <activity
-            android:name=".ListViewActivity"
+            android:name=".lab3.ListViewActivity"
             android:exported="false"
             android:label="ListView"
             android:theme="@style/Theme.Android_test1.AppCompat" />
 
-        <!-- 实验3-2：自定义 AlertDialog -->
+        <!-- 实验三 · 02 自定义 AlertDialog -->
         <activity
-            android:name=".AlertDialogActivity"
+            android:name=".lab3.AlertDialogActivity"
             android:exported="false"
             android:label="AlertDialog"
             android:theme="@style/Theme.Android_test1.AppCompat" />
 
-        <!-- 实验3-3：XML 菜单 -->
+        <!-- 实验三 · 03 XML 菜单 -->
         <activity
-            android:name=".MenuTestActivity"
+            android:name=".lab3.MenuTestActivity"
             android:exported="false"
             android:label="MenuTest"
             android:theme="@style/Theme.Android_test1.AppCompat.ActionBar" />
 
-        <!-- 实验3-4：ActionMode 上下文菜单 -->
+        <!-- 实验三 · 04 ActionMode 上下文菜单 -->
         <activity
-            android:name=".ActionModeActivity"
+            android:name=".lab3.ActionModeActivity"
             android:exported="false"
             android:label="ActionMode"
             android:theme="@style/Theme.Android_test1.AppCompat" />
 
-        <!-- 实验3-5：RecyclerView -->
+        <!-- 实验三 · 05 RecyclerView -->
         <activity
-            android:name=".RecyclerViewActivity"
+            android:name=".lab3.RecyclerViewActivity"
             android:exported="false"
             android:label="RecyclerView"
             android:theme="@style/Theme.Android_test1.AppCompat" />
+
+        <!-- ==================================================
+             期中考试：NotePad 记事本应用（com.example.android_test1.midterm）
+             ================================================== -->
+
+        <!-- 笔记数据仓库：ContentProvider + SQLite，仅本应用内部使用 -->
+        <provider
+            android:name=".midterm.NotePadProvider"
+            android:authorities="com.example.android_test1.notepad"
+            android:exported="false" />
+
+        <!-- 导出笔记时用于分享 txt 文件 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.midterm.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/midterm_file_paths" />
+        </provider>
+
+        <!-- 期中考试 · 01 笔记列表 -->
+        <activity
+            android:name=".midterm.NotesList"
+            android:exported="false"
+            android:label="@string/midterm_title_notes_list"
+            android:theme="@style/Theme.Android_test1.Midterm" />
+
+        <!-- 期中考试 · 02 笔记编辑 -->
+        <activity
+            android:name=".midterm.NoteEditor"
+            android:exported="false"
+            android:label="@string/midterm_title_edit"
+            android:theme="@style/Theme.Android_test1.Midterm"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 期中考试 · 03 修改标题 -->
+        <activity
+            android:name=".midterm.TitleEditor"
+            android:exported="false"
+            android:label="@string/midterm_title_edit_title"
+            android:theme="@style/Theme.Android_test1.Midterm.Dialog"
+            android:windowSoftInputMode="stateVisible" />
+
+        <!-- 期中考试 · 04 偏好设置 -->
+        <activity
+            android:name=".midterm.NoteSettings"
+            android:exported="false"
+            android:label="@string/midterm_title_settings"
+            android:theme="@style/Theme.Android_test1.Midterm" />
+
     </application>
 
 </manifest>
